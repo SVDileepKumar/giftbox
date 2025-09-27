@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#FFD700">
+    <title>TARA PATAKA - Premium Gift Box Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Premium Color Palette - Based on Logo Analysis */
+            --color-deep-navy: #000033;
+            --color-rich-gold: #FFD700;
+            --color-bright-gold: #FFA500;
+            --color-saffron: #FF6B35;
+            --color-warm-orange: #FF8C42;
+            --color-cream: #FFF8DC;
+            --color-ivory: #FFFFF0;
+            --color-soft-gold: #F4E4BC;
+            --color-text-dark: #1A1A1A;
+            --color-text-medium: #4A4A4A;
+            --color-accent-red: #DC2626;
+            --color-accent-blue: #1E40AF;
+            --color-accent-green: #059669;
+            --color-accent-purple: #7C3AED;
+            --color-accent-pink: #EC4899;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #FFF8DC 0%, #FFFFF0 50%, #F4E4BC 100%);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+        
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Enhanced Header Design */
+        .header-bg {
+            background: linear-gradient(135deg, 
+                var(--color-deep-navy) 0%, 
+                #000044 25%, 
+                #1A1A5A 50%, 
+                #2D2D5A 75%, 
+                var(--color-deep-navy) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .logo-container {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .logo-glow {
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3)) 
+                    drop-shadow(0 0 40px rgba(255, 107, 53, 0.2));
+        }
+        
+        /* Vibrant Card Designs */
+        .premium-card {
+            background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
+            border: 2px solid transparent;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 
+                        0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--card-color) 0%, var(--card-color-light) 100%);
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 
+                        0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Enhanced Table Design */
+        .inventory-table {
+            border: 2px solid #333;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        
+        .inventory-table th {
+            background: linear-gradient(135deg, var(--color-deep-navy) 0%, #1A1A5A 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 1rem 1.5rem;
+            border: 1px solid #333;
+        }
+        
+        .inventory-table td {
+            padding: 1rem 1.5rem;
+            border: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .item-row:nth-child(odd) {
+            background: linear-gradient(90deg, #ffffff 0%, #fafafa 100%);
+        }
+        
+        .item-row:nth-child(even) {
+            background: linear-gradient(90deg, #f8f9fa 0%, #f0f0f0 100%);
+        }
+        
+        .item-row:hover {
+            background: linear-gradient(90deg, #fff8dc 0%, #f4e4bc 100%);
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        
+        .sno-cell {
+            color: var(--color-saffron);
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .qty-cell {
+            color: var(--color-deep-navy);
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        /* Decorative Elements - Removed emoji sparkles */
+        
+        /* Creative CSS Sparkles */
+        .sparkle-container {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #FFD700 0%, #FF6B35 50%, transparent 100%);
+            border-radius: 50%;
+            animation: sparkle-twinkle 2s ease-in-out infinite;
+        }
+        
+        .sparkle::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: sparkle-glow 2s ease-in-out infinite;
+        }
+        
+        .sparkle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1px;
+            height: 1px;
+            background: #FFD700;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: sparkle-core 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle-twinkle {
+            0%, 100% { 
+                opacity: 0; 
+                transform: scale(0.5); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.2); 
+            }
+        }
+        
+        @keyframes sparkle-glow {
+            0%, 100% { 
+                opacity: 0; 
+                transform: scale(0.8); 
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: scale(1.5); 
+            }
+        }
+        
+        @keyframes sparkle-core {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: translate(-50%, -50%) scale(0.5); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: translate(-50%, -50%) scale(1); 
+            }
+        }
+        
+        /* Floating Sparkles */
+        .floating-sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: linear-gradient(45deg, #FFD700, #FF6B35);
+            border-radius: 50%;
+            animation: float-sparkle 4s ease-in-out infinite;
+        }
+        
+        .floating-sparkle::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float-glow 4s ease-in-out infinite;
+        }
+        
+        @keyframes float-sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(0) scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-30px) scale(1);
+            }
+        }
+        
+        @keyframes float-glow {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(1.3);
+            }
+        }
+        
+        /* Golden Dust Effect */
+        .golden-dust {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: radial-gradient(circle, #FFD700 0%, transparent 100%);
+            border-radius: 50%;
+            animation: dust-float 6s linear infinite;
+        }
+        
+        @keyframes dust-float {
+            0% {
+                opacity: 0;
+                transform: translateY(0) translateX(0) scale(0);
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(-10px) translateX(5px) scale(1);
+            }
+            90% {
+                opacity: 0.8;
+                transform: translateY(-50px) translateX(20px) scale(0.8);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-60px) translateX(25px) scale(0);
+            }
+        }
+        
+        /* Sparkle Burst Effect */
+        .sparkle-burst {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, #FFD700 0%, #FF6B35 50%, transparent 100%);
+            border-radius: 50%;
+            animation: burst-effect 3s ease-in-out infinite;
+        }
+        
+        .sparkle-burst::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: burst-glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes burst-effect {
+            0%, 100% { 
+                opacity: 0; 
+                transform: scale(0.3); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.5); 
+            }
+        }
+        
+        @keyframes burst-glow {
+            0%, 100% { 
+                opacity: 0; 
+                transform: scale(0.5); 
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: scale(2); 
+            }
+        }
+        
+        /* Enhanced Typography */
+        .title-glow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle-glow {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Table Container Styles */
+        .table-container {
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 20px !important;
+            padding: 20px !important;
+        }
+        
+        .table-column {
+            flex: 1 !important;
+            width: 50% !important;
+        }
+        
+        /* Enhanced Print Optimizations for PDF Export */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            /* Ensure all elements are visible in print */
+            body, html {
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            
+            @page {
+                size: A4;
+                margin: 0.5in;
+            }
+            
+            /* Page break controls */
+            .page-break {
+                page-break-before: always !important;
+            }
+            
+            /* Remove forced page breaks to prevent empty pages */
+            .gift-box-section {
+                page-break-after: auto !important;
+                break-after: auto !important;
+            }
+            
+            /* Break after overview section only if needed */
+            #overview {
+                page-break-after: auto !important;
+                break-after: auto !important;
+            }
+            
+            /* Break before inventory section only if needed */
+            #fullInventory {
+                page-break-before: auto !important;
+                break-before: auto !important;
+            }
+            
+            body {
+                background: white !important;
+                font-size: 11pt;
+                line-height: 1.3;
+                -webkit-print-color-adjust: exact !important;
+                margin: 0;
+                padding: 0;
+                width: 100% !important;
+                max-width: none !important;
+            }
+            
+            /* Header with preserved colors */
+            .header-bg {
+                background: linear-gradient(135deg, #000033 0%, #1A1A5A 100%) !important;
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            .text-accent-gold, .text-yellow-300 {
+                color: #FFD700 !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            /* Premium cards with preserved styling */
+            .premium-card {
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+                border: 2px solid #333 !important;
+                break-inside: avoid;
+                margin-bottom: 20pt;
+                background: white !important;
+                -webkit-print-color-adjust: exact !important;
+                border-radius: 20px !important;
+                padding: 2rem !important;
+            }
+            
+            /* Preserve card gradients and colors */
+            .premium-card::before {
+                content: '' !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                height: 6px !important;
+                background: linear-gradient(90deg, var(--card-color) 0%, var(--card-color-light) 100%) !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            /* Preserve MRP styling and alignment */
+            .premium-card p {
+                color: var(--card-color) !important;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.1) !important;
+                -webkit-print-color-adjust: exact !important;
+                font-size: 2rem !important;
+                font-weight: 800 !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            /* Preserve card gradients */
+            .premium-card div[style*="background: linear-gradient"] {
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            /* Fix card header alignment */
+            .premium-card h3 {
+                font-size: 1.875rem !important;
+                font-weight: 700 !important;
+                color: #1A1A1A !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            /* Fix item count styling */
+            .premium-card .text-xl {
+                font-size: 1.25rem !important;
+                font-weight: 600 !important;
+                color: #4A4A4A !important;
+            }
+            
+            /* Fix card button styling */
+            .premium-card button {
+                display: none !important;
+            }
+            
+            /* Enhanced table styling for print */
+            .inventory-table {
+                box-shadow: none !important;
+                border: 1px solid #333 !important;
+                break-inside: avoid;
+                -webkit-print-color-adjust: exact !important;
+                width: 100% !important;
+                table-layout: fixed !important;
+                font-size: 8pt !important;
+            }
+            
+            /* Fix table column widths for print */
+            .inventory-table th:nth-child(1),
+            .inventory-table td:nth-child(1) {
+                width: 15% !important;
+            }
+            
+            .inventory-table th:nth-child(2),
+            .inventory-table td:nth-child(2) {
+                width: 60% !important;
+            }
+            
+            .inventory-table th:nth-child(3),
+            .inventory-table td:nth-child(3) {
+                width: 25% !important;
+            }
+            
+            .inventory-table th {
+                background: linear-gradient(135deg, #000033 0%, #1A1A5A 100%) !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            .item-row:nth-child(odd) {
+                background: #f8f9fa !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            .item-row:nth-child(even) {
+                background: white !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            /* Preserve gradient backgrounds */
+            .bg-gradient-to-r, .bg-gradient-to-br, .bg-gradient-to-l {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            /* Preserve colored borders */
+            .border-yellow-300, .border-orange-400, .border-red-400 {
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            /* Preserve text colors */
+            .text-accent-red {
+                color: #FF6B35 !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            .text-gray-700, .text-gray-600, .text-gray-500 {
+                color: #4A4A4A !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            .text-gray-900 {
+                color: #1A1A1A !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            /* Hide sparkles and animations in print */
+            .sparkle, .floating-sparkle, .golden-dust, .sparkle-burst {
+                display: none !important;
+            }
+            
+            /* Hide interactive elements */
+            button, .hover\\:scale-105, .hover\\:shadow-lg, .hover\\:shadow-xl {
+                display: none !important;
+            }
+            
+            /* Page breaks */
+            .page-break {
+                page-break-before: always;
+            }
+            
+            /* Logo sizing */
+            .logo-image {
+                width: 120px !important;
+                height: 120px !important;
+            }
+            
+            /* Container optimization */
+            .container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+            
+            /* Fix layout distortion - Keep grid layout for gift boxes */
+            .grid {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 20px !important;
+            }
+            
+            .flex {
+                display: flex !important;
+            }
+            
+            .md\\:flex-row {
+                display: flex !important;
+                flex-direction: row !important;
+            }
+            
+            .lg\\:flex-row {
+                display: flex !important;
+                flex-direction: row !important;
+            }
+            
+            /* Ensure proper table alignment */
+            .inventory-table {
+                width: 100% !important;
+                table-layout: fixed !important;
+                border-collapse: collapse !important;
+            }
+            
+            /* Fix card alignment */
+            .premium-card {
+                width: 100% !important;
+                margin: 0 0 20pt 0 !important;
+                page-break-inside: avoid !important;
+            }
+            
+            /* Ensure proper spacing */
+            .container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            /* Fix table layout */
+            .inventory-table {
+                width: 100% !important;
+                table-layout: fixed !important;
+                font-size: 9pt !important;
+            }
+            
+            .inventory-table th,
+            .inventory-table td {
+                padding: 0.3rem 0.5rem !important;
+                font-size: 9pt !important;
+                word-wrap: break-word !important;
+            }
+            
+            /* Fix card layout */
+            .premium-card {
+                width: 100% !important;
+                margin-bottom: 15pt !important;
+                page-break-inside: avoid !important;
+            }
+            
+            /* Fix header layout */
+            .header-bg {
+                padding: 20pt 0 !important;
+                margin-bottom: 20pt !important;
+            }
+            
+            .logo-image {
+                width: 80px !important;
+                height: 80px !important;
+            }
+            
+            /* Fix text sizing */
+            h1 {
+                font-size: 24pt !important;
+                line-height: 1.2 !important;
+            }
+            
+            h2 {
+                font-size: 18pt !important;
+                line-height: 1.2 !important;
+            }
+            
+            h3 {
+                font-size: 14pt !important;
+                line-height: 1.2 !important;
+            }
+            
+            p {
+                font-size: 10pt !important;
+                line-height: 1.3 !important;
+            }
+            
+            /* Preserve footer colors */
+            .bg-gradient-to-br {
+                background: linear-gradient(135deg, #1F2937 0%, #111827 100%) !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            /* Watermark */
+            .watermark::before {
+                content: "TARA PATAKA - LIGHT THE SKY";
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.03);
+                pointer-events: none;
+                z-index: 1000;
+                font-family: 'Cinzel', serif;
+            }
+            
+            /* Ensure all gradients print correctly */
+            .bg-gradient-to-r.from-yellow-400.to-orange-500 {
+                background: linear-gradient(to right, #F59E0B, #F97316) !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            .bg-gradient-to-r.from-green-500.to-green-600 {
+                background: linear-gradient(to right, #10B981, #059669) !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            .bg-gradient-to-r.from-red-500.to-orange-500 {
+                background: linear-gradient(to right, #EF4444, #F97316) !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            /* Fix spacing and margins */
+            .mb-16, .mb-20, .mb-12 {
+                margin-bottom: 15pt !important;
+            }
+            
+            .mt-16, .mt-20 {
+                margin-top: 15pt !important;
+            }
+            
+            .py-16, .py-12 {
+                padding: 10pt 0 !important;
+            }
+            
+            .px-6, .px-8, .px-12 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            
+            /* Fix overflow issues */
+            .overflow-hidden {
+                overflow: visible !important;
+            }
+            
+            /* Ensure proper page breaks */
+            .page-break {
+                page-break-before: always !important;
+            }
+            
+            /* Fix rounded corners for print */
+            .rounded-xl, .rounded-2xl, .rounded-full {
+                border-radius: 0 !important;
+            }
+        }
+        
+        /* Responsive Enhancements */
+        @media (max-width: 768px) {
+            .premium-card {
+                margin-bottom: 1.5rem;
+            }
+            
+            .inventory-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <header class="py-16 header-bg text-white shadow-2xl mb-16 relative overflow-hidden">
+        <!-- Creative CSS Sparkles Background -->
+        <div class="sparkle-container" style="top: 0; left: 0; right: 0; bottom: 0;">
+            <!-- Main sparkles -->
+            <div class="sparkle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+            <div class="sparkle" style="top: 30%; right: 15%; animation-delay: 1s;"></div>
+            <div class="sparkle" style="top: 60%; left: 20%; animation-delay: 2s;"></div>
+            <div class="sparkle" style="top: 70%; right: 25%; animation-delay: 0.5s;"></div>
+            <div class="sparkle" style="top: 40%; left: 5%; animation-delay: 1.5s;"></div>
+            <div class="sparkle" style="top: 50%; right: 5%; animation-delay: 2.5s;"></div>
+            
+            <!-- Floating sparkles -->
+            <div class="floating-sparkle" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+            <div class="floating-sparkle" style="top: 20%; right: 20%; animation-delay: 1s;"></div>
+            <div class="floating-sparkle" style="top: 80%; left: 30%; animation-delay: 2s;"></div>
+            <div class="floating-sparkle" style="top: 90%; right: 10%; animation-delay: 3s;"></div>
+            
+            <!-- Golden dust particles -->
+            <div class="golden-dust" style="top: 15%; left: 25%; animation-delay: 0.5s;"></div>
+            <div class="golden-dust" style="top: 35%; right: 30%; animation-delay: 1.5s;"></div>
+            <div class="golden-dust" style="top: 65%; left: 15%; animation-delay: 2.5s;"></div>
+            <div class="golden-dust" style="top: 85%; right: 20%; animation-delay: 3.5s;"></div>
+            
+            <!-- Sparkle bursts -->
+            <div class="sparkle-burst" style="top: 25%; left: 8%; animation-delay: 1s;"></div>
+            <div class="sparkle-burst" style="top: 45%; right: 12%; animation-delay: 2s;"></div>
+            <div class="sparkle-burst" style="top: 75%; left: 18%; animation-delay: 3s;"></div>
+        </div>
+        
+        <div class="container mx-auto text-center px-6 logo-container relative z-10">
+            <!-- Enhanced Logo with Glow Effect -->
+            <div class="mb-8 relative">
+                <img src="tara_logo.png" alt="Tara Pataka Emblem - Light the Sky" 
+                     class="logo-image mx-auto rounded-full border-4 border-yellow-300 shadow-2xl logo-glow" 
+                     style="width: 150px; height: 150px; object-fit: cover;">
+                <!-- CSS sparkles around logo -->
+                <div class="sparkle" style="top: -10px; right: -10px; animation-delay: 0s;"></div>
+                <div class="sparkle" style="bottom: -10px; left: -10px; animation-delay: 1s;"></div>
+                <div class="sparkle" style="top: 50%; left: -20px; transform: translateY(-50%); animation-delay: 2s;"></div>
+                <div class="sparkle" style="top: 50%; right: -20px; transform: translateY(-50%); animation-delay: 0.5s;"></div>
+            </div>
+            
+            <!-- Main Title with Enhanced Typography -->
+            <h1 class="font-cinzel text-8xl font-extrabold text-accent-gold tracking-widest leading-none title-glow mb-4 relative">
+                TARA PATAKA
+                <!-- CSS sparkles around title -->
+                <div class="sparkle" style="top: -20px; left: -20px; animation-delay: 0s;"></div>
+                <div class="sparkle" style="top: -20px; right: -20px; animation-delay: 0.5s;"></div>
+            </h1>
+            
+            <!-- Subtitle with Decorative Elements -->
+            <div class="flex items-center justify-center mb-6 relative">
+                <div class="w-16 h-1 bg-gradient-to-r from-transparent to-yellow-300"></div>
+                <p class="text-4xl text-gray-100 tracking-widest mx-6 font-cinzel subtitle-glow">
+                    PREMIUM GIFT BOX COLLECTION
+                </p>
+                <div class="w-16 h-1 bg-gradient-to-l from-transparent to-yellow-300"></div>
+                <!-- Side sparkles -->
+                <div class="sparkle" style="left: -40px; top: 50%; transform: translateY(-50%); animation-delay: 1s;"></div>
+                <div class="sparkle" style="right: -40px; top: 50%; transform: translateY(-50%); animation-delay: 1.5s;"></div>
+            </div>
+            
+            <!-- Tagline with Enhanced Styling -->
+            <p class="text-2xl text-yellow-300 font-playfair italic tracking-wide relative">
+                LIGHT THE SKY
+                <!-- Floating sparkles around tagline -->
+                <div class="floating-sparkle" style="top: -30px; left: 25%; animation-delay: 1s;"></div>
+                <div class="floating-sparkle" style="top: -30px; right: 25%; animation-delay: 2s;"></div>
+            </p>
+            
+            <!-- Corner sparkles -->
+            <div class="sparkle" style="top: 20px; left: 20px; animation-delay: 0s;"></div>
+            <div class="sparkle" style="top: 20px; right: 20px; animation-delay: 1s;"></div>
+            <div class="sparkle" style="bottom: 20px; left: 20px; animation-delay: 2s;"></div>
+            <div class="sparkle" style="bottom: 20px; right: 20px; animation-delay: 0.5s;"></div>
+            
+            <!-- Additional corner sparkles -->
+            <div class="sparkle" style="top: 40px; left: 40px; animation-delay: 3s;"></div>
+            <div class="sparkle" style="top: 40px; right: 40px; animation-delay: 1.5s;"></div>
+            <div class="sparkle" style="bottom: 40px; left: 40px; animation-delay: 2.5s;"></div>
+            <div class="sparkle" style="bottom: 40px; right: 40px; animation-delay: 0.8s;"></div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-12 main-content-wrapper watermark relative">
+        <!-- Creative CSS Sparkles in Main Content -->
+        <div class="sparkle-container" style="top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+            <!-- Floating sparkles -->
+            <div class="floating-sparkle" style="top: 10%; left: 5%; animation-delay: 4s;"></div>
+            <div class="floating-sparkle" style="top: 30%; right: 8%; animation-delay: 5s;"></div>
+            <div class="floating-sparkle" style="top: 60%; left: 3%; animation-delay: 6s;"></div>
+            <div class="floating-sparkle" style="top: 80%; right: 5%; animation-delay: 7s;"></div>
+            
+            <!-- Golden dust particles -->
+            <div class="golden-dust" style="top: 15%; left: 10%; animation-delay: 4.5s;"></div>
+            <div class="golden-dust" style="top: 45%; right: 12%; animation-delay: 5.5s;"></div>
+            <div class="golden-dust" style="top: 75%; left: 8%; animation-delay: 6.5s;"></div>
+            
+            <!-- Subtle sparkles -->
+            <div class="sparkle" style="top: 20%; left: 2%; animation-delay: 4.2s;"></div>
+            <div class="sparkle" style="top: 40%; right: 3%; animation-delay: 5.2s;"></div>
+            <div class="sparkle" style="top: 70%; left: 5%; animation-delay: 6.2s;"></div>
+        </div>
+        
+        <section id="overview" class="mb-20 gift-box-section">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-6 relative">
+                    <h2 class="text-5xl font-cinzel font-bold mb-4 text-accent-red title-glow">
+                        Experience the Grandeur
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-orange-400 mx-auto rounded-full"></div>
+                    <!-- CSS sparkles around title -->
+                    <div class="sparkle" style="top: -10px; left: -20px; animation-delay: 0s;"></div>
+                    <div class="sparkle" style="top: -10px; right: -20px; animation-delay: 1s;"></div>
+                </div>
+                <p class="text-2xl text-gray-700 max-w-5xl mx-auto font-playfair leading-relaxed">
+                    Each Tara Pataka gift box is a perfectly curated experience, balancing quality, variety, and spectacular effects for a truly memorable celebration.
+                </p>
+            </div>
+            
+            <div id="giftBoxGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            </div>
+        </section>
+
+        <!-- --- PAGE BREAK FOR CLEAN PDF LAYOUT --- -->
+        <div class="page-break"></div>
+
+        <section id="fullInventory" class="mt-20">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-6 relative">
+                    <h2 class="text-5xl font-cinzel font-bold mb-4 text-gray-900 title-glow">
+                        Gift Box Contents
+                    </h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 mx-auto rounded-full"></div>
+                    <!-- CSS sparkles around title -->
+                    <div class="sparkle" style="top: -15px; left: -25px; animation-delay: 0s;"></div>
+                    <div class="sparkle" style="top: -15px; right: -25px; animation-delay: 1.5s;"></div>
+                </div>
+                <p class="text-2xl text-gray-700 max-w-5xl mx-auto font-playfair leading-relaxed">
+                    A comprehensive, itemized list of contents for each of our premium gift boxes, organized in a split-column format for easy reference and professional presentation.
+                </p>
+            </div>
+            
+            <div id="inventoryContainer" class="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-200">
+                <!-- Content will be injected here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white mt-20 py-12 print:shadow-none relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-yellow-300 rounded-full"></div>
+            <div class="absolute top-20 right-20 w-16 h-16 bg-orange-400 rounded-full"></div>
+            <div class="absolute bottom-10 left-1/4 w-12 h-12 bg-red-400 rounded-full"></div>
+            <div class="absolute bottom-20 right-1/3 w-14 h-14 bg-yellow-400 rounded-full"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <!-- Enhanced Header -->
+            <div class="mb-8 relative">
+                <h3 class="text-4xl font-cinzel font-bold text-accent-gold mb-4 title-glow">
+                    Ordering & Contact
+                </h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-orange-400 mx-auto rounded-full mb-6"></div>
+                <!-- CSS sparkles around title -->
+                <div class="sparkle" style="top: -10px; left: -30px; animation-delay: 0s;"></div>
+                <div class="sparkle" style="top: -10px; right: -30px; animation-delay: 1s;"></div>
+            </div>
+            
+            <!-- Contact Information -->
+            <p class="max-w-4xl mx-auto text-gray-200 mb-8 text-lg font-playfair leading-relaxed">
+                For orders or detailed inquiries, please contact us. Note: Final item selection may vary slightly based on stock availability.
+            </p>
+            
+            <!-- Enhanced Contact Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
+                <a href="tel:+918074490037" 
+                   class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-extrabold text-xl tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
+                    Call: +91 80744 90037
+                    <!-- CSS sparkle on button -->
+                    <div class="sparkle" style="top: -5px; right: -5px; animation-delay: 0s;"></div>
+                </a>
+                <div class="sparkle hidden sm:block" style="animation-delay: 1s;"></div>
+                <a href="https://wa.me/918074490037" target="_blank" 
+                   class="bg-gradient-to-r from-green-500 to-green-600 text-white font-extrabold text-xl tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
+                    WhatsApp: 80744 90037
+                    <!-- CSS sparkle on button -->
+                    <div class="sparkle" style="top: -5px; right: -5px; animation-delay: 1.5s;"></div>
+                </a>
+            </div>
+
+            <!-- Safety Notice with Enhanced Styling - Moved to next line -->
+            <div class="mt-8 relative">
+                <div class="bg-gradient-to-r from-red-500 to-orange-500 text-white font-extrabold text-2xl py-6 px-8 rounded-2xl inline-block shadow-2xl mb-8 border-4 border-yellow-300 transform hover:scale-105 transition-all duration-300">
+                    SAFETY MANDATE: WEAR MASK. AVOID RISK.
+                </div>
+                <!-- CSS sparkles around safety notice -->
+                <div class="sparkle" style="top: -10px; left: -20px; animation-delay: 0s;"></div>
+                <div class="sparkle" style="top: -10px; right: -20px; animation-delay: 1s;"></div>
+            </div>
+            
+            <!-- Brand Footer -->
+            <div class="border-t border-yellow-300 pt-6 relative">
+                <p class="text-yellow-300 text-lg font-cinzel font-bold tracking-widest">TARA PATAKA</p>
+                <p class="text-gray-400 text-sm font-light mt-2">Light the Sky</p>
+                <!-- CSS sparkles around brand -->
+                <div class="sparkle" style="top: 10px; left: -30px; animation-delay: 0s;"></div>
+                <div class="sparkle" style="top: 10px; right: -30px; animation-delay: 1.5s;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const giftBoxData = [
+                {
+                    id: 'twitter',
+                    name: 'Twitter Gift Box',
+                    totalItems: 25,
+                    mrp: 1500,
+                    keyFeatures: 'The Starter: Our most accessible pack, ideal for smaller celebrations, featuring key items like Electric Stone.',
+                    color: '#FF6347', /* Tomato Red for border */
+                    items: [
+                        { no: 1, name: 'Lakshmi 3 1/2', qty: '1 pkt' }, { no: 14, name: 'Gee Boomba', qty: '1 box' },
+                        { no: 2, name: 'Kuruvui 2 1/2', qty: '1 pkt' }, { no: 15, name: 'Serpent', qty: '1 box' },
+                        { no: 3, name: 'Ashraffi Small', qty: '1 pc' }, { no: 16, name: '10 Chorsa Crackers', qty: '1 pkt' },
+                        { no: 4, name: 'Ashraffi Big', qty: '1 pc' }, { no: 17, name: 'Electric Stone', qty: '1 box' },
+                        { no: 5, name: '28 Chorsa Crackers', qty: '1 pkt' }, { no: 18, name: 'Photo Flash', qty: '1 pc' },
+                        { no: 6, name: '28 Goa Crackers', qty: '1 pkt' }, { no: 19, name: 'Snake Cartoon', qty: '1 pc' },
+                        { no: 7, name: 'Fancy Wheel', qty: '1 pc' }, { no: 20, name: 'Cartoon (5 pcs)', qty: '1 box' },
+                        { no: 8, name: 'Bullet Bomb', qty: '1 box' }, { no: 21, name: 'Red Bijili (50 pcs)', qty: '1 pkt' },
+                        { no: 9, name: 'Butterfly', qty: '1 pc' }, { no: 22, name: '7cm Electric Sparklers', qty: '1 box' },
+                        { no: 10, name: 'Flowerpot Big (5 pcs)', qty: '1 box' }, { no: 23, name: '7cm Color Sparklers', qty: '1 box' },
+                        { no: 11, name: 'Zamin Chakkar Big', qty: '1 box' }, { no: 24, name: '7cm Green Sparklers', qty: '1 box' },
+                        { no: 12, name: 'Military Bomb', qty: '1 pc' }, { no: 25, name: 'Twinkling Star(5 pcs)', qty: '1 pc' }
+                    ]
+                },
+                {
+                    id: 'spiderman',
+                    name: 'Spiderman Gift Box',
+                    totalItems: 30,
+                    mrp: 1800,
+                    keyFeatures: 'The Action Pack: Focus on popular items like Bullet Bombs, Photo Flash, and a great mix of color effects.',
+                    color: '#FF0000', /* Red for border */
+                    items: [
+                        { no: 1, name: 'Lakshmi 4"', qty: '1 pkt' }, { no: 16, name: 'Sky Shot', qty: '1 pc' },
+                        { no: 2, name: 'Laxmi 3 1/2"', qty: '1 pkt' }, { no: 17, name: 'Military Bomb', qty: '1 pc' },
+                        { no: 3, name: 'Laxmi 2 3/4"', qty: '1 pkt' }, { no: 18, name: 'Fancy Wheel', qty: '1 pc' },
+                        { no: 4, name: 'Parrot 2 3/4"', qty: '1 pkt' }, { no: 19, name: '7 Shot', qty: '1 pc' },
+                        { no: 5, name: 'Kuruvui 2 3/4"', qty: '1 pkt' }, { no: 20, name: 'Ashraffi Big', qty: '1 pc' },
+                        { no: 6, name: '10 Gaint Crackers', qty: '1 pkt' }, { no: 21, name: 'Ashraffi Small', qty: '1 pc' },
+                        { no: 7, name: '28 Chorsa Crackers', qty: '1 pkt' }, { no: 22, name: 'Cartoon (5 pcs.)', qty: '1 box' },
+                        { no: 8, name: '28 Goa Crackers', qty: '1 pkt' }, { no: 23, name: 'Snake Cartoon', qty: '1 pc' },
+                        { no: 9, name: 'Photo Flash', qty: '1 pc' }, { no: 24, name: 'Shower', qty: '1 pkt' },
+                        { no: 10, name: 'Bullet Bomb (5 pcs.)', qty: '1 box' }, { no: 25, name: 'Chorsa Crackers', qty: '1 pkt' },
+                        { no: 11, name: 'Flowerpot Big (5 pcs.)', qty: '1 box' }, { no: 26, name: 'Red Bijili (50 pcs)', qty: '1 pkt' },
+                        { no: 12, name: 'Zamin Chakar Big (5 Pcs)', qty: '1 box' }, { no: 27, name: '7cm Electric sparklers', qty: '1 box' },
+                        { no: 13, name: 'Twinkling Star (5 pcs.)', qty: '1 box' }, { no: 28, name: '7cm Color sparklers', qty: '1 box' },
+                        { no: 14, name: 'Stone', qty: '1 box' }, { no: 29, name: '7cm Green sparklers', qty: '1 box' },
+                        { no: 15, name: 'Gee Boomba', qty: '1 box' }, { no: 30, name: '7cm Red sparklers', qty: '1 box' }
+                    ]
+                },
+                {
+                    id: 'king',
+                    name: 'King Gift Box',
+                    totalItems: 35,
+                    mrp: 2200,
+                    keyFeatures: 'The Classic: A robust selection of essential crackers, shells, and sparklers for a complete celebration.',
+                    color: '#800080', /* Purple for border */
+                    items: [
+                        { no: 1, name: 'Lakshmi 4"', qty: '1 pkt' }, { no: 19, name: '10 Gaint Crackers', qty: '1 pkt' },
+                        { no: 2, name: 'Laxmi 3 1/2"', qty: '1 pkt' }, { no: 20, name: 'Snake Cartoon', qty: '1 pc' },
+                        { no: 3, name: 'Kuruvui 3 3/4"', qty: '1 pkt' }, { no: 21, name: 'Stone', qty: '1 box' },
+                        { no: 4, name: 'Parrot 3 1/2"', qty: '1 pkt' }, { no: 22, name: 'Gee Boomba', qty: '1 box' },
+                        { no: 5, name: 'Kuruvui 2 3/4"', qty: '1 pkt' }, { no: 23, name: '7 Shot', qty: '1 pc' },
+                        { no: 6, name: 'Parrot 2 3/4"', qty: '1 pkt' }, { no: 24, name: 'Sky Shot', qty: '1 pc' },
+                        { no: 7, name: 'Chota Beem', qty: '1 pkt' }, { no: 25, name: 'Fancy Wheel', qty: '1 pc' },
+                        { no: 8, name: '10 Chorsa Crackers', qty: '1 pkt' }, { no: 26, name: 'Ashraffi Big', qty: '1 pc' },
+                        { no: 9, name: '28 Chorsa Crackers', qty: '1 pkt' }, { no: 27, name: 'Ashraffi Small', qty: '1 pc' },
+                        { no: 10, name: '28 Goa Crackers', qty: '1 pkt' }, { no: 28, name: 'Serpent', qty: '1 box' },
+                        { no: 11, name: '28 Gaint Crackers', qty: '1 pkt' }, { no: 29, name: 'Rocket (5 pcs)', qty: '1 box' },
+                        { no: 12, name: '100 Wala Lar', qty: '1 pkt' }, { no: 30, name: 'Red Bijili (50 pcs)', qty: '1 pkt' },
+                        { no: 13, name: 'Bullet Bomb (5 pcs)', qty: '1 box' }, { no: 31, name: '7cm Electric sparklers', qty: '1 box' },
+                        { no: 14, name: 'Flowerpot Big (5 pcs)', qty: '1 box' }, { no: 32, name: '7cm Color sparklers', qty: '1 box' },
+                        { no: 15, name: 'Zamin Chakar Big (5 pcs)', qty: '1 box' }, { no: 33, name: '7cm Green sparklers', qty: '1 box' },
+                        { no: 16, name: 'Twinkling Star (5 pcs)', qty: '1 box' }, { no: 34, name: '7cm Red sparklers', qty: '1 box' },
+                        { no: 17, name: 'Cartoon Pops', qty: '1 Pc' }, { no: 35, name: '10cm Electric sparklers', qty: '1 box' },
+                        { no: 18, name: 'Color Pops', qty: '1 pc' }
+                    ]
+                },
+                {
+                    id: 'fancy',
+                    name: 'Fancy Gift Box',
+                    totalItems: 40,
+                    mrp: 2800,
+                    keyFeatures: 'The Elegance: A sophisticated collection featuring premium items like Serpent Big, Photo Flash, and an extensive variety of sparklers for a refined celebration.',
+                    color: '#4B0082', /* Indigo for border */
+                     items: [
+                        { no: 1, name: 'Lakshmi 4"', qty: '1 pkt' }, { no: 21, name: '7 Shot', qty: '1 pc' },
+                        { no: 2, name: 'Laxmi 3 1/2"', qty: '1 pkt' }, { no: 22, name: 'Ashraffi Small', qty: '1 pc' },
+                        { no: 3, name: 'Parrot 3 1/2"', qty: '1 pkt' }, { no: 23, name: 'Ashraffi Big', qty: '1 pc' },
+                        { no: 4, name: 'Kuruvui 2 3/4"', qty: '1 pkt' }, { no: 24, name: 'Fancy Wheel', qty: '1 pc' },
+                        { no: 5, name: 'Parrot 2 3/4"', qty: '1 pkt' }, { no: 25, name: 'Butterfly', qty: '1 pc' },
+                        { no: 6, name: 'Laxmi 2 3/4"', qty: '1 pkt' }, { no: 26, name: 'Gee Boomba', qty: '1 box' },
+                        { no: 7, name: '10 Chorsa Crackers', qty: '1 pkt' }, { no: 27, name: 'Stone', qty: '1 box' },
+                        { no: 8, name: '28 Chorsa Crackers', qty: '1 pkt' }, { no: 28, name: 'Serpent Big', qty: '1 box' },
+                        { no: 9, name: '28 Goa Crackers', qty: '1 pkt' }, { no: 29, name: 'Serpent Small', qty: '1 box' },
+                        { no: 10, name: '28 Gaint Crackers', qty: '1 pkt' }, { no: 30, name: 'Photo Flash', qty: '1 pc' },
+                        { no: 11, name: '10 Gaint Crackers', qty: '1 pkt' }, { no: 31, name: 'Military Bomb', qty: '1 pc' },
+                        { no: 12, name: '100 Wala Lar', qty: '1 pkt' }, { no: 32, name: 'Rocket (5 pcs)', qty: '1 box' },
+                        { no: 13, name: 'Bullet Bomb (5 Pcs)', qty: '1 box' }, { no: 14, name: 'Flowerpot Big (5 Pcs)', qty: '1 box' },
+                        { no: 15, name: 'Zamin Chakar Big (5 Pcs)', qty: '1 box' }, { no: 34, name: 'Color Pops', qty: '1 pc' },
+                        { no: 16, name: 'Twinkling Star 1 1/2 (5 Pcs)', qty: '1 box' }, { no: 35, name: '7cm Electric sparklers', qty: '1 box' },
+                        { no: 17, name: 'Shower', qty: '1 pkt' }, { no: 36, name: '7cm Color sparklers', qty: '1 box' },
+                        { no: 18, name: 'Cartoon (5 Pcs)', qty: '1 box' }, { no: 37, name: '7cm Green sparklers', qty: '1 box' },
+                        { no: 19, name: 'Snake Cartoon', qty: '1 pc' }, { no: 38, name: '7cm Red sparklers', qty: '1 box' },
+                        { no: 20, name: 'Sky Shot', qty: '1 pc' }, { no: 39, name: '10cm Electric sparklers', qty: '1 box' },
+                        { no: 33, name: 'Red Bijili (50 Pcs)', qty: '1 pkt' }, { no: 40, name: '10cm Color sparklers', qty: '1 box' }
+                    ]
+                },
+                {
+                    id: 'champion',
+                    name: 'Champion Gift Box',
+                    totalItems: 45,
+                    mrp: 3400,
+                    keyFeatures: 'The Powerhouse: Perfect balance of sound, color, and novelties like Ganga Yamuna and Selfy Stick.',
+                    color: '#006400', /* Dark Green for a deep, rich accent */
+                    items: [
+                        { no: 1, name: "Laxmi 4'", qty: '1 Pkt' }, { no: 23, name: '7 Cm Cold Sparklers', qty: '1 Box' },
+                        { no: 2, name: "Laxmi 3.5'", qty: '1 Pkt' }, { no: 24, name: '10 Chorsa Crackers', qty: '1 pkt' },
+                        { no: 3, name: "Parrot 3.5'", qty: '1 Pkt' }, { no: 25, name: '10 Gaint Crackers', qty: '1 pkt' },
+                        { no: 4, name: "Jocker 3.5'", qty: '1 Pkt' }, { no: 26, name: '100 Wala Lar', qty: '1 pkt' },
+                        { no: 5, name: "Laxmi 2.75'", qty: '1 Pkt' }, { no: 27, name: 'Gee Boomba', qty: '1 Box' },
+                        { no: 6, name: "Kuruvui 2.75'", qty: '1 Pkt' }, { no: 28, name: 'Twinkling Star (5 pcs)', qty: '1 Box' },
+                        { no: 7, name: "Jocker 2.75'", qty: '1 Pkt' }, { no: 29, name: 'Snake Cartoon', qty: '1 pc' },
+                        { no: 8, name: "Parrot 2.75'", qty: '1 Pkt' }, { no: 30, name: 'Ashraffi Small', qty: '1 Pcs' },
+                        { no: 9, name: '28 Giant Crackers', qty: '1 Pkt' }, { no: 31, name: 'Ashraffi Big', qty: '1 Pcs' },
+                        { no: 10, name: '28 Chorsa Crackers', qty: '1 Pkt' }, { no: 32, name: 'Electric Stone', qty: '1 Box' },
+                        { no: 11, name: '28 Goa Crackers', qty: '1 Pkt' }, { no: 33, name: 'Fancy Wheel', qty: '1 Pcs' },
+                        { no: 12, name: 'Bullet Bomb (5 pcs)', qty: '1 Box' }, { no: 34, name: 'Military Bomb', qty: '1 Pcs' },
+                        { no: 13, name: 'Flower Pot Big (5 pcs)', qty: '1 Box' }, { no: 35, name: 'Sky Shot', qty: '1 Pcs' },
+                        { no: 14, name: 'Zamin Chakra (big) (5 pcs)', qty: '1 Box' }, { no: 36, name: '7 Shot', qty: '1 Pcs' },
+                        { no: 15, name: 'Ganga Yamuna', qty: '1 Pcs' }, { no: 37, name: 'Colour Pops', qty: '1 Pcs' },
+                        { no: 16, name: 'Rocket (5 Pcs)', qty: '1 Box' }, { no: 38, name: 'Shower', qty: '1 Pkt' },
+                        { no: 17, name: '7 Cm Electric Sparklers', qty: '1 Box' }, { no: 39, name: 'Butterfly', qty: '1 Pcs' },
+                        { no: 18, name: '7 Cm Colour Sparklers', qty: '1 Box' }, { no: 40, name: 'Serpent', qty: '1 Box' },
+                        { no: 19, name: '7 Cm Red Sparklers', qty: '1 Box' }, { no: 41, name: '555 Bomb', qty: '1 Pcs' },
+                        { no: 20, name: '7 Cm Green Sparklers', qty: '1 Box' }, { no: 42, name: 'Photo Flash', qty: '1 Pcs' },
+                        { no: 21, name: '10 Cm Colour Sparklers', qty: '1 Box' }, { no: 43, name: 'Cartoon (5 pcs)', qty: '1 box' },
+                        { no: 22, name: '10 Cm Electric Sparklers', qty: '1 Box' }, { no: 44, name: 'Bijili Red (50 Pcs)', qty: '1 Pkt' },
+                        { no: 45, name: 'Selfy Stick', qty: '1 Pcs' }
+                    ]
+                },
+                {
+                    id: 'golden',
+                    name: 'Golden Gift Box',
+                    totalItems: 50,
+                    mrp: 3800,
+                    keyFeatures: 'The Zenith: Our premium collection featuring the exclusive Angry Bird 3½", Penta Ariel Out, Kit Kat, and the full spectrum of sparklers.',
+                    color: '#DAA520', /* Goldenrod for border */
+                    items: [
+                        { no: 1, name: 'Lakshmi 4"', qty: '1 pkt' }, { no: 26, name: 'Snake Cartoon', qty: '1 pc' },
+                        { no: 2, name: 'Lakshmi 3½"', qty: '1 pkt' }, { no: 27, name: 'Military Bomb', qty: '1 pc' },
+                        { no: 3, name: 'Angry Bird 3½"', qty: '1 pkt' }, { no: 28, name: 'Serpent Big', qty: '1 box' },
+                        { no: 4, name: 'Parrot 3½"', qty: '1 pkt' }, { no: 29, name: 'Sky Shot', qty: '1 pc' },
+                        { no: 5, name: 'Kuruvi 3½"', qty: '1 pkt' }, { no: 30, name: 'Fancy Wheel', qty: '1 pc' },
+                        { no: 6, name: 'Chotta Been 2¾"', qty: '1 pkt' }, { no: 31, name: 'Stone', qty: '1 pc' },
+                        { no: 7, name: 'Laxmi 2¾"', qty: '1 pkt' }, { no: 32, name: 'Ashraffi Small', qty: '1 pc' },
+                        { no: 8, name: 'Parrot 2¾"', qty: '1 pkt' }, { no: 33, name: 'Ashraffi Big', qty: '1 pc' },
+                        { no: 9, name: '7 Shots', qty: '1 pkt' }, { no: 34, name: 'Butterfly', qty: '1 pc' },
+                        { no: 10, name: 'Gaint Crackers', qty: '1 pkt' }, { no: 35, name: 'Penta Ariel Out', qty: '1 pc' },
+                        { no: 11, name: '10 Chorsa Crackers', qty: '1 pkt' }, { no: 36, name: 'Kit Kat', qty: '1 box' },
+                        { no: 12, name: '28 Chorsa Crackers', qty: '1 pkt' }, { no: 37, name: 'Helicopter', qty: '1 pc' },
+                        { no: 13, name: '28 Goa Crackers', qty: '1 pkt' }, { no: 38, name: 'Photo Flash', qty: '1 pc' },
+                        { no: 14, name: '28 Gaint Crackers', qty: '1 pkt' }, { no: 39, name: 'Selfie Stick', qty: '1 pc' },
+                        { no: 15, name: '100 Wala Lar', qty: '1 pkt' }, { no: 40, name: 'Pambaram', qty: '1 pc' },
+                        { no: 16, name: 'Shower', qty: '1 pc' }, { no: 41, name: 'Lunik Express', qty: '1 pc' },
+                        { no: 17, name: 'Bullet Bomb', qty: '1 box' }, { no: 42, name: 'Rocket (5 pcs)', qty: '1 pkt' },
+                        { no: 18, name: 'Flowerpot Big', qty: '1 box' }, { no: 43, name: 'Red Bijili (50 pcs)', qty: '1 pkt' },
+                        { no: 19, name: 'Zamin Chakar Big', qty: '1 box' }, { no: 44, name: '7cm Electric Sparklers', qty: '1 box' },
+                        { no: 20, name: 'Twinkling Star', qty: '1 box' }, { no: 45, name: '7cm Color Sparklers', qty: '1 box' },
+                        { no: 21, name: 'Ganga Jamuna', qty: '1 pc' }, { no: 46, name: '7cm Green Sparklers', qty: '1 box' },
+                        { no: 22, name: 'Serpent Small', qty: '1 pc' }, { no: 47, name: '7cm Red Sparklers', qty: '1 box' },
+                        { no: 23, name: '555 Bomb', qty: '1 pc' }, { no: 48, name: '7cm Cold Sparklers', qty: '1 box' },
+                        { no: 24, name: 'Color Pops', qty: '1 pc' }, { no: 49, name: '10cm Electric Sparklers', qty: '1 box' },
+                        { no: 25, name: 'Gee Boomba', qty: '1 box' }, { no: 50, name: '10cm Color Sparklers', qty: '1 box' }
+                    ]
+                }
+            ];
+
+            // Sort all items within each box by S. No.
+            giftBoxData.forEach(box => {
+                box.items.sort((a, b) => {
+                    const noA = a.no === null || a.no === undefined ? Infinity : a.no;
+                    const noB = b.no === null || b.no === undefined ? Infinity : b.no;
+                    return noA - noB;
+                });
+            });
+
+            // 1. GENERATE ENHANCED GRID CARDS (OVERVIEW)
+            const giftBoxGrid = document.getElementById('giftBoxGrid');
+            giftBoxData.forEach((box, index) => {
+                const card = document.createElement('div');
+                const mrpText = typeof box.mrp === 'number' ? `₹ ${box.mrp.toLocaleString('en-IN')}` : box.mrp;
+                
+                // Define vibrant color schemes for each card
+                const colorSchemes = [
+                    { primary: '#FFD700', secondary: '#FFA500', accent: '#FF6B35', bg: 'linear-gradient(135deg, #FFF8DC 0%, #F4E4BC 100%)' },
+                    { primary: '#059669', secondary: '#10B981', accent: '#34D399', bg: 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)' },
+                    { primary: '#7C3AED', secondary: '#8B5CF6', accent: '#A78BFA', bg: 'linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 100%)' },
+                    { primary: '#DC2626', secondary: '#EF4444', accent: '#F87171', bg: 'linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%)' },
+                    { primary: '#1E40AF', secondary: '#3B82F6', accent: '#60A5FA', bg: 'linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%)' },
+                    { primary: '#EC4899', secondary: '#F472B6', accent: '#F9A8D4', bg: 'linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%)' }
+                ];
+                
+                const scheme = colorSchemes[index % colorSchemes.length];
+                
+                card.innerHTML = `
+                    <div class="relative overflow-hidden">
+                        <!-- Decorative Top Border -->
+                        <div class="absolute top-0 left-0 right-0 h-2" style="background: linear-gradient(90deg, ${scheme.primary} 0%, ${scheme.secondary} 50%, ${scheme.accent} 100%);"></div>
+                        
+                        <!-- Card Content -->
+                        <div class="p-8">
+                            <!-- Card Header with Icon -->
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-cinzel text-3xl font-bold text-gray-900">${box.name}</h3>
+                                <div class="text-3xl">🎆</div>
+                            </div>
+                            
+                            <!-- Price with Enhanced Styling -->
+                            <div class="mb-6">
+                                <p class="text-4xl font-extrabold mb-2" style="color: ${scheme.primary}; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">${mrpText}</p>
+                                <div class="w-16 h-1 rounded-full" style="background: linear-gradient(90deg, ${scheme.primary} 0%, ${scheme.secondary} 100%);"></div>
+                            </div>
+                            
+                            <!-- Items Count with Icon -->
+                            <div class="flex items-center mb-4">
+                                <span class="text-2xl mr-2">📦</span>
+                                <p class="text-xl font-semibold text-gray-700">${box.totalItems} Premium Items</p>
+                            </div>
+                            
+                            <!-- Features Description -->
+                            <p class="text-sm text-gray-600 mb-6 italic leading-relaxed">${box.keyFeatures}</p>
+                            
+                            <!-- Enhanced Button -->
+                            <button onclick="document.getElementById('${box.id}-table').scrollIntoView({ behavior: 'smooth' });" 
+                                    class="w-full py-3 px-6 text-lg font-bold rounded-full text-white transition-all duration-300 hover:scale-105 hover:shadow-lg print:hidden"
+                                    style="background: linear-gradient(135deg, ${scheme.primary} 0%, ${scheme.secondary} 100%); box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                View Complete List ↓
+                            </button>
+                        </div>
+                        
+                        <!-- Decorative Bottom Accent -->
+                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-300 to-transparent opacity-50"></div>
+                    </div>
+                `;
+                
+                card.className = `premium-card relative overflow-hidden`;
+                card.style.setProperty('--card-color', scheme.primary);
+                card.style.setProperty('--card-color-light', scheme.secondary);
+                card.style.background = scheme.bg;
+                
+                giftBoxGrid.appendChild(card);
+            });
+
+            // 2. GENERATE ENHANCED INVENTORY TABLES (SPLIT COLUMN LAYOUT)
+            const inventoryContainer = document.getElementById('inventoryContainer');
+            
+            giftBoxData.forEach((box, boxIndex) => {
+                const mrpText = typeof box.mrp === 'number' ? `MRP: ₹ ${box.mrp.toLocaleString('en-IN')}` : `MRP: ${box.mrp}`;
+                const items = box.items;
+                const half = Math.ceil(items.length / 2);
+                const col1 = items.slice(0, half);
+                const col2 = items.slice(half);
+
+                // Define color schemes for table headers
+                const headerColors = [
+                    'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                    'linear-gradient(135deg, #059669 0%, #10B981 100%)',
+                    'linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%)',
+                    'linear-gradient(135deg, #DC2626 0%, #EF4444 100%)',
+                    'linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%)',
+                    'linear-gradient(135deg, #EC4899 0%, #F472B6 100%)'
+                ];
+
+                const renderTableRows = (data, offset = 0) => {
+                    return data.map((item, index) => {
+                        return `
+                            <tr class="item-row hover:bg-gradient-to-r hover:from-yellow-50 hover:to-orange-50 transition-all duration-200">
+                                <td class="p-4 font-bold text-lg sno-cell">${item.no || ''}</td>
+                                <td class="p-4 text-gray-800 font-medium">${item.name || ''}</td>
+                                <td class="p-4 qty-cell">${item.qty || ''}</td>
+                            </tr>
+                        `;
+                    }).join('');
+                };
+
+                const tableHTML = `
+                    <div id="${box.id}-table" class="p-8 print:p-0 border-b-8 print:border-b-0 mb-8" style="border-bottom-color: ${box.color};">
+                        
+                        <!-- Enhanced Header Section -->
+                        <div class="p-8 print:p-4 rounded-t-2xl mb-6 border-b-4 print:border-b-2 relative overflow-hidden" 
+                             style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-bottom-color: ${box.color};">
+                            
+                            <!-- Decorative Background Pattern -->
+                            <div class="absolute top-0 right-0 w-32 h-32 opacity-10">
+                                <div class="w-full h-full bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full"></div>
+                            </div>
+                            
+                            <div class="relative z-10">
+                                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-4">
+                                    <div>
+                                        <h3 class="text-4xl font-cinzel font-bold text-gray-900 mb-2 flex items-center">
+                                            <span class="mr-3 text-3xl">🎆</span>
+                                            ${box.name}
+                                        </h3>
+                                        <div class="w-20 h-1 rounded-full mb-4" style="background: linear-gradient(90deg, ${box.color} 0%, #FFD700 100%);"></div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-2xl font-bold mb-2" style="color: ${box.color}; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">${mrpText}</p>
+                                        <p class="text-lg text-gray-600 font-semibold">${box.totalItems} Premium Items</p>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-xl text-gray-700 font-playfair italic leading-relaxed">${box.keyFeatures}</p>
+                            </div>
+                        </div>
+
+                        <!-- Enhanced Table Layout - Fixed Side by Side -->
+                        <div class="table-container" style="display: flex; flex-direction: row; gap: 20px; padding: 20px;">
+                            
+                            <!-- Column 1 -->
+                            <div class="table-column" style="flex: 1; width: 50%;">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                    <table class="w-full text-left font-inter inventory-table">
+                                        <thead>
+                                            <tr style="background: ${headerColors[boxIndex % headerColors.length]};">
+                                                <th class="p-4 font-bold text-white text-lg uppercase tracking-wider">S. No.</th>
+                                                <th class="p-4 font-bold text-white text-lg uppercase tracking-wider">Item Name</th>
+                                                <th class="p-4 font-bold text-white text-lg uppercase tracking-wider text-right">Qty.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            ${renderTableRows(col1)}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Column 2 (only display if content exists) -->
+                            ${col2.length > 0 ? `
+                                <div class="table-column" style="flex: 1; width: 50%;">
+                                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                        <table class="w-full text-left font-inter inventory-table">
+                                            <thead>
+                                                <tr style="background: ${headerColors[boxIndex % headerColors.length]};">
+                                                    <th class="p-4 font-bold text-white text-lg uppercase tracking-wider">S. No.</th>
+                                                    <th class="p-4 font-bold text-white text-lg uppercase tracking-wider">Item Name</th>
+                                                    <th class="p-4 font-bold text-white text-lg uppercase tracking-wider text-right">Qty.</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                ${renderTableRows(col2)}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+                        
+                        <!-- Decorative Bottom Border -->
+                        <div class="h-2 bg-gradient-to-r from-transparent via-yellow-300 to-transparent rounded-full mt-6"></div>
+                        <div class="print:mb-12"></div> <!-- Spacer for print layout -->
+                    </div>
+                `;
+                inventoryContainer.innerHTML += tableHTML;
+            });
+
+        });
+    </script>
+</body>
+</html>

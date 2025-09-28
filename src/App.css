@@ -1,0 +1,964 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root {
+  /* Premium Color Palette - Based on Logo Analysis */
+  --color-deep-navy: #000033;
+  --color-rich-gold: #FFD700;
+  --color-bright-gold: #FFA500;
+  --color-saffron: #FF6B35;
+  --color-warm-orange: #FF8C42;
+  --color-cream: #FFF8DC;
+  --color-ivory: #FFFFF0;
+  --color-soft-gold: #F4E4BC;
+  --color-text-dark: #1A1A1A;
+  --color-text-medium: #4A4A4A;
+  --color-accent-red: #DC2626;
+  --color-accent-blue: #1E40AF;
+  --color-accent-green: #059669;
+  --color-accent-purple: #7C3AED;
+  --color-accent-pink: #EC4899;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #FFF8DC 0%, #FFFFF0 50%, #F4E4BC 100%);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  margin: 0;
+  padding: 0;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Enhanced Header Design */
+.header-bg {
+  background: linear-gradient(135deg, 
+    var(--color-deep-navy) 0%, 
+    #000044 25%, 
+    #1A1A5A 50%, 
+    #2D2D5A 75%, 
+    var(--color-deep-navy) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.header-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.logo-container {
+  position: relative;
+  z-index: 10;
+}
+
+.logo-glow {
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3)) 
+          drop-shadow(0 0 40px rgba(255, 107, 53, 0.2));
+}
+
+/* Vibrant Card Designs */
+.premium-card {
+  background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 
+              0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--card-color) 0%, var(--card-color-light) 100%);
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 
+              0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Table Design */
+.inventory-table {
+  border: 2px solid #333;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.inventory-table th {
+  background: linear-gradient(135deg, var(--color-deep-navy) 0%, #1A1A5A 100%);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1rem 1.5rem;
+  border: 1px solid #333;
+}
+
+.inventory-table td {
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-row:nth-child(odd) {
+  background: linear-gradient(90deg, #ffffff 0%, #fafafa 100%);
+}
+
+.item-row:nth-child(even) {
+  background: linear-gradient(90deg, #f8f9fa 0%, #f0f0f0 100%);
+}
+
+.item-row:hover {
+  background: linear-gradient(90deg, #fff8dc 0%, #f4e4bc 100%);
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.sno-cell {
+  color: var(--color-saffron);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.qty-cell {
+  color: var(--color-deep-navy);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Creative CSS Sparkles */
+.sparkle-container {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #FFD700 0%, #FF6B35 50%, transparent 100%);
+  border-radius: 50%;
+  animation: sparkle-twinkle 2s ease-in-out infinite;
+}
+
+.sparkle::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: sparkle-glow 2s ease-in-out infinite;
+}
+
+.sparkle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  background: #FFD700;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: sparkle-core 2s ease-in-out infinite;
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0.5); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2); 
+  }
+}
+
+@keyframes sparkle-glow {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0.8); 
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.5); 
+  }
+}
+
+@keyframes sparkle-core {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: translate(-50%, -50%) scale(0.5); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translate(-50%, -50%) scale(1); 
+  }
+}
+
+/* Floating Sparkles */
+.floating-sparkle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: linear-gradient(45deg, #FFD700, #FF6B35);
+  border-radius: 50%;
+  animation: float-sparkle 4s ease-in-out infinite;
+}
+
+.floating-sparkle::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float-glow 4s ease-in-out infinite;
+}
+
+@keyframes float-sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-30px) scale(1);
+  }
+}
+
+@keyframes float-glow {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.3);
+  }
+}
+
+/* Golden Dust Effect */
+.golden-dust {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: radial-gradient(circle, #FFD700 0%, transparent 100%);
+  border-radius: 50%;
+  animation: dust-float 6s linear infinite;
+}
+
+@keyframes dust-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-10px) translateX(5px) scale(1);
+  }
+  90% {
+    opacity: 0.8;
+    transform: translateY(-50px) translateX(20px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) translateX(25px) scale(0);
+  }
+}
+
+/* Sparkle Burst Effect */
+.sparkle-burst {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #FFD700 0%, #FF6B35 50%, transparent 100%);
+  border-radius: 50%;
+  animation: burst-effect 3s ease-in-out infinite;
+}
+
+.sparkle-burst::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: burst-glow 3s ease-in-out infinite;
+}
+
+@keyframes burst-effect {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0.3); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.5); 
+  }
+}
+
+@keyframes burst-glow {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0.5); 
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(2); 
+  }
+}
+
+/* Enhanced Typography */
+.title-glow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle-glow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Container Styles */
+.table-container {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 20px !important;
+  padding: 20px !important;
+}
+
+.table-column {
+  flex: 1 !important;
+  width: 50% !important;
+}
+
+/* Enhanced Print Optimizations for PDF Export */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Ensure all elements are visible in print */
+  body, html {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  @page {
+    size: A4;
+    margin: 0.5in;
+  }
+  
+  /* Page break controls */
+  .page-break {
+    page-break-before: always !important;
+  }
+  
+  /* Remove forced page breaks to prevent empty pages */
+  .gift-box-section {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+  
+  /* Break after overview section only if needed */
+  #overview {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+  
+  /* Break before inventory section only if needed */
+  #fullInventory {
+    page-break-before: auto !important;
+    break-before: auto !important;
+  }
+  
+  body {
+    background: white !important;
+    font-size: 11pt;
+    line-height: 1.3;
+    -webkit-print-color-adjust: exact !important;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    max-width: none !important;
+  }
+  
+  /* Header with preserved colors */
+  .header-bg {
+    background: linear-gradient(135deg, #000033 0%, #1A1A5A 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  .text-accent-gold, .text-yellow-300 {
+    color: #FFD700 !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  /* Premium cards with preserved styling */
+  .premium-card {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    border: 2px solid #333 !important;
+    break-inside: avoid;
+    margin-bottom: 20pt;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+  }
+  
+  /* Preserve card gradients and colors */
+  .premium-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 6px !important;
+    background: linear-gradient(90deg, var(--card-color) 0%, var(--card-color-light) 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  /* Preserve MRP styling and alignment */
+  .premium-card p {
+    color: var(--card-color) !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1) !important;
+    -webkit-print-color-adjust: exact !important;
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Preserve card gradients */
+  .premium-card div[style*="background: linear-gradient"] {
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  /* Fix card header alignment */
+  .premium-card h3 {
+    font-size: 1.875rem !important;
+    font-weight: 700 !important;
+    color: #1A1A1A !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Fix item count styling */
+  .premium-card .text-xl {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: #4A4A4A !important;
+  }
+  
+  /* Fix card button styling */
+  .premium-card button {
+    display: none !important;
+  }
+  
+  /* Enhanced table styling for print */
+  .inventory-table {
+    box-shadow: none !important;
+    border: 1px solid #333 !important;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact !important;
+    width: 100% !important;
+    table-layout: fixed !important;
+    font-size: 8pt !important;
+  }
+  
+  /* Fix table column widths for print */
+  .inventory-table th:nth-child(1),
+  .inventory-table td:nth-child(1) {
+    width: 15% !important;
+  }
+  
+  .inventory-table th:nth-child(2),
+  .inventory-table td:nth-child(2) {
+    width: 60% !important;
+  }
+  
+  .inventory-table th:nth-child(3),
+  .inventory-table td:nth-child(3) {
+    width: 25% !important;
+  }
+  
+  .inventory-table th {
+    background: linear-gradient(135deg, #000033 0%, #1A1A5A 100%) !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  .item-row:nth-child(odd) {
+    background: #f8f9fa !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  .item-row:nth-child(even) {
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  /* Preserve gradient backgrounds */
+  .bg-gradient-to-r, .bg-gradient-to-br, .bg-gradient-to-l {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  /* Preserve colored borders */
+  .border-yellow-300, .border-orange-400, .border-red-400 {
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  /* Preserve text colors */
+  .text-accent-red {
+    color: #FF6B35 !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  .text-gray-700, .text-gray-600, .text-gray-500 {
+    color: #4A4A4A !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  .text-gray-900 {
+    color: #1A1A1A !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  /* Hide sparkles and animations in print */
+  .sparkle, .floating-sparkle, .golden-dust, .sparkle-burst {
+    display: none !important;
+  }
+  
+  /* Hide interactive elements */
+  button, .hover\\:scale-105, .hover\\:shadow-lg, .hover\\:shadow-xl {
+    display: none !important;
+  }
+  
+  /* Page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+  
+  /* Logo sizing */
+  .logo-image {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  /* Container optimization */
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Fix layout distortion - Keep grid layout for gift boxes */
+  .grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+  }
+  
+  .flex {
+    display: flex !important;
+  }
+  
+  .md\\:flex-row {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  
+  .lg\\:flex-row {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  
+  /* Ensure proper table alignment */
+  .inventory-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+  }
+  
+  /* Fix card alignment */
+  .premium-card {
+    width: 100% !important;
+    margin: 0 0 20pt 0 !important;
+    page-break-inside: avoid !important;
+  }
+  
+  /* Ensure proper spacing */
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Fix table layout */
+  .inventory-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    font-size: 9pt !important;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    padding: 0.3rem 0.5rem !important;
+    font-size: 9pt !important;
+    word-wrap: break-word !important;
+  }
+  
+  /* Fix card layout */
+  .premium-card {
+    width: 100% !important;
+    margin-bottom: 15pt !important;
+    page-break-inside: avoid !important;
+  }
+  
+  /* Fix header layout */
+  .header-bg {
+    padding: 20pt 0 !important;
+    margin-bottom: 20pt !important;
+  }
+  
+  .logo-image {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  /* Fix text sizing */
+  h1 {
+    font-size: 24pt !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: 18pt !important;
+    line-height: 1.2 !important;
+  }
+  
+  h3 {
+    font-size: 14pt !important;
+    line-height: 1.2 !important;
+  }
+  
+  p {
+    font-size: 10pt !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Preserve footer colors */
+  .bg-gradient-to-br {
+    background: linear-gradient(135deg, #1F2937 0%, #111827 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  /* Watermark */
+  .watermark::before {
+    content: "TARA PATAKA - LIGHT THE SKY";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.03);
+    pointer-events: none;
+    z-index: 1000;
+    font-family: 'Cinzel', serif;
+  }
+  
+  /* Ensure all gradients print correctly */
+  .bg-gradient-to-r.from-yellow-400.to-orange-500 {
+    background: linear-gradient(to right, #F59E0B, #F97316) !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  .bg-gradient-to-r.from-green-500.to-green-600 {
+    background: linear-gradient(to right, #10B981, #059669) !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  .bg-gradient-to-r.from-red-500.to-orange-500 {
+    background: linear-gradient(to right, #EF4444, #F97316) !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  /* Fix spacing and margins */
+  .mb-16, .mb-20, .mb-12 {
+    margin-bottom: 15pt !important;
+  }
+  
+  .mt-16, .mt-20 {
+    margin-top: 15pt !important;
+  }
+  
+  .py-16, .py-12 {
+    padding: 10pt 0 !important;
+  }
+  
+  .px-6, .px-8, .px-12 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Fix overflow issues */
+  .overflow-hidden {
+    overflow: visible !important;
+  }
+  
+  /* Ensure proper page breaks */
+  .page-break {
+    page-break-before: always !important;
+  }
+  
+  /* Fix rounded corners for print */
+  .rounded-xl, .rounded-2xl, .rounded-full {
+    border-radius: 0 !important;
+  }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .premium-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .inventory-table {
+    font-size: 0.9rem;
+  }
+  
+  .table-container {
+    flex-direction: column !important;
+  }
+  
+  .table-column {
+    width: 100% !important;
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem !important;
+  }
+  
+  .header-bg {
+    padding: 2rem 0 !important;
+  }
+  
+  .logo-image {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  
+  .text-6xl {
+    font-size: 2.5rem !important;
+  }
+  
+  .text-8xl {
+    font-size: 3rem !important;
+  }
+  
+  .text-4xl {
+    font-size: 1.5rem !important;
+  }
+  
+  .text-3xl {
+    font-size: 1.25rem !important;
+  }
+  
+  .text-2xl {
+    font-size: 1.125rem !important;
+  }
+  
+  .premium-card {
+    margin-bottom: 1rem;
+    padding: 1rem !important;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    padding: 0.5rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .table-container {
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+  
+  /* Mobile-specific animations */
+  .sparkle, .floating-sparkle, .golden-dust, .sparkle-burst {
+    display: none !important;
+  }
+  
+  /* Mobile contact buttons */
+  .flex.flex-col.sm\\:flex-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  /* Mobile table responsiveness */
+  .inventory-table {
+    font-size: 0.75rem !important;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 1024px) and (min-width: 641px) {
+  .table-container {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .table-column {
+    width: 100% !important;
+  }
+  
+  .premium-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    padding: 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Large Desktop Optimizations */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px !important;
+  }
+  
+  .premium-card {
+    padding: 2rem !important;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    padding: 1.25rem 1.75rem !important;
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .premium-card:hover {
+    transform: none !important;
+  }
+  
+  .item-row:hover {
+    transform: none !important;
+  }
+  
+  button:hover {
+    transform: none !important;
+  }
+  
+  /* Increase touch targets */
+  button {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    min-height: 44px !important;
+  }
+}
+
+
+/* Print optimizations for discount pricing */
+@media print {
+  .discount-badge {
+    background: #DC2626 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  .savings-text {
+    color: #059669 !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+  
+  .mrp-strikethrough {
+    color: #6B7280 !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}
+
+/* Clean Discount Styling */
+.discount-badge {
+  background: #DC2626;
+  color: white;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.savings-text {
+  color: #059669;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.mrp-strikethrough {
+  text-decoration: line-through;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.discounted-price {
+  font-weight: 700;
+  color: inherit;
+}

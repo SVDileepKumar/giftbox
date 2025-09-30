@@ -28,19 +28,19 @@ const Inventory: React.FC = () => {
       keyFeatures: 'The Starter: Our most accessible pack, ideal for smaller celebrations, featuring key items like Electric Stone.',
       color: '#FF6347',
       items: [
-        { no: 1, name: 'Lakshmi 3 1/2', qty: '1 pkt' }, { no: 14, name: 'Gee Boomba', qty: '1 box' },
-        { no: 2, name: 'Kuruvui 2 1/2', qty: '1 pkt' }, { no: 15, name: 'Serpent', qty: '1 box' },
-        { no: 3, name: 'Ashraffi Small', qty: '1 pc' }, { no: 16, name: '10 Chorsa Crackers', qty: '1 pkt' },
-        { no: 4, name: 'Ashraffi Big', qty: '1 pc' }, { no: 17, name: 'Electric Stone', qty: '1 box' },
-        { no: 5, name: '28 Chorsa Crackers', qty: '1 pkt' }, { no: 18, name: 'Photo Flash', qty: '1 pc' },
-        { no: 6, name: '28 Goa Crackers', qty: '1 pkt' }, { no: 19, name: 'Snake Cartoon', qty: '1 pc' },
-        { no: 7, name: 'Fancy Wheel', qty: '1 pc' }, { no: 20, name: 'Cartoon (5 pcs)', qty: '1 box' },
-        { no: 8, name: 'Bullet Bomb', qty: '1 box' }, { no: 21, name: 'Red Bijili (50 pcs)', qty: '1 pkt' },
-        { no: 9, name: 'Butterfly', qty: '1 pc' }, { no: 22, name: '7cm Electric Sparklers', qty: '1 box' },
-        { no: 10, name: 'Flowerpot Big (5 pcs)', qty: '1 box' }, { no: 23, name: '7cm Color Sparklers', qty: '1 box' },
-        { no: 11, name: 'Zamin Chakkar Big', qty: '1 box' }, { no: 24, name: '7cm Green Sparklers', qty: '1 box' },
-        { no: 12, name: 'Military Bomb', qty: '1 pc' }, { no: 25, name: 'Twinkling Star(5 pcs)', qty: '1 pc' }
-      ]
+        { no: 1, name: 'Lakshmi 3 1/2', qty: '1 pkt' }, { no: 15, name: 'Gee Boomba', qty: '1 box' },
+        { no: 2, name: 'Kuruvui 2 3/4', qty: '1 pkt' }, { no: 16, name: 'Serpent', qty: '1 box' },
+        { no: 3, name: 'Ashraffi Small', qty: '1 pc' }, { no: 17, name: '10 Chorsa Crackers', qty: '1 pkt' },
+        { no: 4, name: 'Ashraffi Big', qty: '1 pc' }, { no: 18, name: 'Electric Stone', qty: '1 box' },
+        { no: 5, name: '28 Chorsa Crackers', qty: '1 pkt' }, { no: 19, name: 'Photo Flash', qty: '1 pc' },
+        { no: 6, name: '28 Goa Crackers', qty: '1 pkt' }, { no:20, name: 'Snake Cartoon', qty: '1 pc' },
+        { no: 8, name: 'Fancy Wheel', qty: '1 pc' }, { no: 21, name: 'Cartoon (5 pcs)', qty: '1 box' },
+        { no: 7, name: 'Bullet Bomb', qty: '1 box' }, { no: 22, name: 'Red Bijili (50 pcs)', qty: '1 pkt' },
+        { no: 9, name: 'Butterfly', qty: '1 pc' }, { no: 23, name: '7cm Electric Sparklers', qty: '1 box' },
+        { no: 10, name: 'Flowerpot Big (5 pcs)', qty: '1 box' }, { no: 24, name: '7cm Color Sparklers', qty: '1 box' },
+        { no: 11, name: 'Zamin Chakkar Big', qty: '1 box' }, { no: 25, name: '7cm Green Sparklers', qty: '1 box' },
+        { no: 12, name: 'Military Bomb', qty: '1 pc' }, { no: 13, name: 'Twinkiling Star(5 pcs)', qty: '1 box' }, { no: 14, name: 'Sky Shot', qty: '1 pc' }
+   ]
     },
     {
       id: 'spiderman',
@@ -201,6 +201,48 @@ const Inventory: React.FC = () => {
         { no: 23, name: '555 Bomb', qty: '1 pc' }, { no: 48, name: '7cm Cold Sparklers', qty: '1 box' },
         { no: 24, name: 'Color Pops', qty: '1 pc' }, { no: 49, name: '10cm Electric Sparklers', qty: '1 box' },
         { no: 25, name: 'Gee Boomba', qty: '1 box' }, { no: 50, name: '10cm Color Sparklers', qty: '1 box' }
+      ]
+    },
+    {
+      id: 'golden-moments',
+      name: 'Golden Moments Gift Box',
+      totalItems: 60,
+      mrp: 4500,
+      discount: 50,
+      discountedPrice: 2250,
+      keyFeatures: '🌟 THE ULTIMATE COLLECTION: Our most comprehensive 60-item premium gift box featuring exclusive pieces like Angry Bird, Penta Ariel Out, Kit Kat, and the complete range of sparklers for the grandest celebrations! 🌟',
+      color: '#FFD700',
+      items: [
+        { no: 1, name: 'Lakshmi 4"', qty: '1 pkt' }, { no: 31, name: 'Color Pops', qty: '1 pc' },
+        { no: 2, name: 'Parrot 4"', qty: '1 pkt' }, { no: 32, name: 'Jee Boomba', qty: '1 box' },
+        { no: 3, name: 'Laxmi 3 1/2"', qty: '1 pkt' }, { no: 33, name: '7 Shots', qty: '1 pc' },
+        { no: 4, name: 'Parrot 3 1/2"', qty: '1 pkt' }, { no: 34, name: 'Penta Ariel out', qty: '1 pc' },
+        { no: 5, name: 'Angry Bird 3 1/2"', qty: '1 pkt' }, { no: 35, name: 'Sky Shot', qty: '1 pc' },
+        { no: 6, name: 'Kuruvi 2 3/4"', qty: '1 pkt' }, { no: 36, name: 'Military bomb', qty: '1 pc' },
+        { no: 7, name: 'Parrot 2 3/4"', qty: '1 pkt' }, { no: 37, name: 'Serpent Big', qty: '1 box' },
+        { no: 8, name: 'Laxmi 2 3/4"', qty: '1 pkt' }, { no: 38, name: 'Serpent Small', qty: '1 box' },
+        { no: 9, name: 'Chotta Beem', qty: '1 pkt' }, { no: 39, name: 'Fancy Wheel', qty: '1 pc' },
+        { no: 10, name: '555 Bomb', qty: '1 pc' }, { no: 40, name: 'Stone', qty: '1 box' },
+        { no: 11, name: '10 Chorsa Crackers', qty: '1 pkt' }, { no: 41, name: 'Ashrafi big', qty: '1 pc' },
+        { no: 12, name: '28 Chorsa Crackers', qty: '1 pkt' }, { no: 42, name: 'Ashrafi small', qty: '1 pc' },
+        { no: 13, name: '28 Goa Crackers', qty: '1 pkt' }, { no: 43, name: 'Butterfly', qty: '1 pc' },
+        { no: 14, name: '28 Giant Crackers', qty: '1 pkt' }, { no: 44, name: 'Photo Flash', qty: '1 pc' },
+        { no: 15, name: '10 Giant Crackers', qty: '1 pkt' }, { no: 45, name: 'Kinderjoy', qty: '1 pc' },
+        { no: 16, name: '100 Wala Lar', qty: '1 pkt' }, { no: 46, name: '10 Chorsa Crackers', qty: '1 pkt' },
+        { no: 17, name: 'Helicopter', qty: '1 pc' }, { no: 47, name: '7cm sparklers', qty: '1 box' },
+        { no: 18, name: 'Atom Bomb', qty: '1 box' }, { no: 48, name: 'Bijili Striped (50)', qty: '1 pkt' },
+        { no: 19, name: 'Twinkling Star 1 1/2"', qty: '1 box' }, { no: 49, name: 'Hyd. Bomb (2 pc)', qty: '1 pkt' },
+        { no: 20, name: 'Twinkling Star 4"', qty: '1 pkt' }, { no: 50, name: 'Magic Pop', qty: '1 box' },
+        { no: 21, name: 'Flower Pot Big', qty: '1 box' }, { no: 51, name: 'Rocket (5 pcs)', qty: '1 box' },
+        { no: 22, name: 'Lunik Express', qty: '1 pc' }, { no: 52, name: 'Bijili Red (50 pcs)', qty: '1 pkt' },
+        { no: 23, name: 'Zamin Chakkar Big', qty: '1 box' }, { no: 53, name: '7cm Electric sparklers', qty: '1 box' },
+        { no: 24, name: 'Selfie Stick', qty: '1 pc' }, { no: 54, name: '7cm Color sparklers', qty: '1 box' },
+        { no: 25, name: 'Ganga Jamuna', qty: '1 pc' }, { no: 55, name: '7cm Green sparklers', qty: '1 box' },
+        { no: 26, name: 'Shower Green', qty: '1 pc' }, { no: 56, name: '7cm Red sparklers', qty: '1 box' },
+        { no: 27, name: 'Shower', qty: '1 pc' }, { no: 57, name: '10cm Electric sparklers', qty: '1 box' },
+        { no: 28, name: 'Snake Cartoon', qty: '1 pc' }, { no: 58, name: '10cm Color sparklers', qty: '1 box' },
+        { no: 29, name: 'Cartoon', qty: '1 box' }, { no: 59, name: '10cm Green sparklers', qty: '1 box' },
+        { no: 30, name: 'Kit Kat', qty: '1 box' }, { no: 60, name: '10cm Red sparklers', qty: '1 box' }
       ]
     }
   ];

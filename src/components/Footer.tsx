@@ -30,25 +30,35 @@ const Footer: React.FC = () => {
         </p>
         
         {/* Enhanced Contact Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
+        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
           <a 
-            href="tel:+918074490037" 
+            href="tel:+916300800587" 
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-extrabold text-xl tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative"
           >
-            Call: +91 80744 90037
+            📞 Primary: +91 63008 00587
             {/* CSS sparkle on button */}
             <div className="sparkle" style={{ top: '-5px', right: '-5px', animationDelay: '0s' }}></div>
           </a>
           <div className="sparkle hidden sm:block" style={{ animationDelay: '1s' }}></div>
           <a 
+            href="https://wa.me/916300800587" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-green-500 to-green-600 text-white font-extrabold text-lg tracking-wider px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative"
+          >
+            WhatsApp: 63008 00587
+            {/* CSS sparkle on button */}
+            <div className="sparkle" style={{ top: '-5px', right: '-5px', animationDelay: '1.5s' }}></div>
+          </a>
+          <a 
             href="https://wa.me/918074490037" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-green-500 to-green-600 text-white font-extrabold text-xl tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative"
+            className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-extrabold text-lg tracking-wider px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative"
           >
             WhatsApp: 80744 90037
             {/* CSS sparkle on button */}
-            <div className="sparkle" style={{ top: '-5px', right: '-5px', animationDelay: '1.5s' }}></div>
+            <div className="sparkle" style={{ top: '-5px', right: '-5px', animationDelay: '2s' }}></div>
           </a>
         </div>
 

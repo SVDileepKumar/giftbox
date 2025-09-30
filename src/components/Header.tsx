@@ -162,10 +162,14 @@ const Header: React.FC = () => {
         
         {/* Contact Details in Header */}
         <div className="bg-black bg-opacity-40 rounded-lg p-4 mt-6 backdrop-blur-sm">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="flex items-center justify-center">
               <span className="text-yellow-300 mr-2">📞</span>
-              <span className="text-yellow-100">Call: +91-80744-90037</span>
+              <span className="text-yellow-100 font-bold">Primary: +91-63008-00587</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <span className="text-yellow-300 mr-2">📱</span>
+              <span className="text-yellow-100">WhatsApp: +91-80744-90037</span>
             </div>
             <div className="flex items-center justify-center">
               <span className="text-yellow-300 mr-2">📍</span>
